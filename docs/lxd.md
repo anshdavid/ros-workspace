@@ -4,9 +4,9 @@ LXD Setup
 LXD, which is written in Go, creates a system daemon that apps can access locally using a Unix socket, or over the network via HTTPS. LXD's main selling points include the following: A host can run many LXC containers using only a single system daemon, which simplifies management and reduces overhead
 
 > Reference documentaion for the following instruction:
-    1. [Ros LXD][__ROS_LXD__]
-    2. [Gui apps inside LXD][__GUI_LXD__]
-    3. [Ros development LXD][__ROS_DEV_LXD__]
+>   1. [Ros LXD][__ROS_LXD__]
+>   2. [Gui apps inside LXD][__GUI_LXD__]
+>   3. [Ros development LXD][__ROS_DEV_LXD__]
 
 # LXC Profile
 
