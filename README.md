@@ -21,23 +21,22 @@ Addition packages and dependencies are required to work with
 Repository contains `file_server` and `unity_simulation_scene` packages required to establish connection with unity3D for robotics simulation. 
 > Refer to [repo][__GIT_UNITYSIM__] for setup
 
-## Jackal simulation launch
+## Jackal communiation launch
 
 `roslaunch unity_simulation_scene unity_jackal_scene.launch`
 
-## Jackal simulation launch
+## Turtlebot3 communiation launch
 
 `roslaunch unity_simulation_scene unity_turtlebot3_scene.launch`
 
-# LXD
+# Development Setup
 
-[Containerized development setup instruction for LXC/LXD][__DOC_LXD__]
+1. [Containerized development setup instruction for LXC/LXD][__DOC_LXD__]
+2. [Containerized development setup instruction for Docker][__DOC_DOCKER__]
 
-# Docker
+---
 
-[Containerized development setup instruction for Docker][__DOC_DOCKER__]
-
-# Directory structure
+### Directory structure
 
     .
     ├── docs
@@ -104,6 +103,6 @@ Repository contains `file_server` and `unity_simulation_scene` packages required
 [__TURTLEBOT3__]: https://github.com/ROBOTIS-GIT/turtlebot3
 [__HUSKY__]: https://github.com/husky/
 [__TURTLEBOT__]: https://github.com/turtlebot/turtlebot
-[__GIT_UNITYSIM__]: EMPTY
+[__GIT_UNITYSIM__]: https://github.com/ironWolf1990/unity-ros-sharp
 [__DOC_LXD__]: ./docs/lxd.md
 [__DOC_DOCKER__]: ./docs/docker.md
