@@ -75,24 +75,24 @@ Setting up static ip for containers
 # Devices
 
 ## Port forwarding / Proxy Device
-To setup port forwaring between container host and container, proxy devices need to be added
+To setup port forwaring between host and a container, proxy devices need to be added
 
-> **lxc config device add CONTAINER_NAME PROXY_DEVICE_NAME proxy listen=tcp:HOST:PORT connect=tcp:CONTAINER_IP:PORT**
+> **lxc config device add <CONTAINER_NAME> <PROXY_DEVICE_NAME> proxy listen=tcp:<HOST>:<PORT> connect=tcp:<CONTAINER_IP>:\<PORT>**
 - Example: lxc config device add container-noetic ros11311 proxy listen=tcp:0.0.0.0:11311 connect=a.b.c.d:11311
 
 ## Sharing workspace / Mounting Folder
 
-> **lxc config device add CONTAINER_NAME DISK_DEVICE_NAME disk source=<PATH/TO/FOLDER/ON/HOST> path=PATH/TO/FOLDER/ON/CONTAINER**
+> **lxc config device add <CONTAINER_NAME> <DISK_DEVICE_NAME> disk source=<PATH/TO/FOLDER/ON/HOST> path=<PATH/TO/FOLDER/ON/CONTAINER>**
 - Example: lxc config device add container-noetic catkin_ws disk source=/ros/ros-workspace/robot_ws/ path=/home/ubuntu/robot_ws
 ## Remove
 
 To remove a device attached to a container:
 
-> **lxc config device remove CONTAINER_NAME DEVICE_NAME**
+> **lxc config device remove <CONTAINER_NAME> <DEVICE_NAME>**
 
 # Privilidged Container
 
-Setting container to **priviledged mode** should be avoided
+Setting container **serurity priviledged true** should be avoided
 
 > lxc config set CONTAINER_NAME security.privileged true
 
@@ -106,6 +106,7 @@ If our public key is stored at ~/.ssh/id_rsa.pub, we'll simply create an authori
 
     ubuntu@lxhost:~$ cp ~/.ssh/id_rsa.pub /tmp/authorized_keys
     ubuntu@lxhost:~$ lxc file push /tmp/authorized_keys <CONTAINER_NAME>/home/ubuntu/.ssh/authorized_keys -p
+    ubuntu@lxhost:~$ ssh -v ubuntu@a.b.c.d
 
 <!-- create proxy / port forward for port 22
 lxc config device add <CONTAINER_NAME> proxy22 proxy connect=tcp:127.0.0.1:22 listen=tcp:0.0.0.0:2222 -->
@@ -115,7 +116,7 @@ lxc config device add <CONTAINER_NAME> proxy22 proxy connect=tcp:127.0.0.1:22 li
 [__ROS_LXD__]: https://ubuntu.com/blog/installing-ros-in-lxd
 [__ROS_DEV_LXD__]: https://ubuntu.com/blog/ros-development-with-lxd
 [__GUI_LXD__]: https://blog.simos.info/running-x11-software-in-lxd-containers/
-[__LINODE_LXC_REV_PROXY__]: https://www.linode.com/docs/guides/beginners-guide-to-lxd-reverse-proxy/
+[__LINODE_LXC_PROXY__]: https://www.linode.com/docs/guides/beginners-guide-to-lxd-reverse-proxy/
 [__SSH_1__]: https://askubuntu.com/questions/1106369/how-to-ssh-into-a-lxd-guest
 [__VSCODE_REMOTE__]: https://code.visualstudio.com/docs/remote/ssh
 [__LXD_1__]: https://www.arnatious.com/blog/lxc/

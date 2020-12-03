@@ -18,7 +18,7 @@ Addition packages and dependencies are required to work with
 
 # UNITY3D ROS SHARP
 
-Repository contains `file_server` and `unity_simulation_scene` packages required to establish connection with unity3D for robotics simulation. 
+Repository contains `file_server` and `unity_simulation_scene` packages that are required to establish connection with unity3D for robotics simulation. 
 > Refer to [repo][__GIT_UNITYSIM__] for setup
 
 ## Jackal communiation launch
