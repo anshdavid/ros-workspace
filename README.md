@@ -103,6 +103,6 @@ Repository contains `file_server` and `unity_simulation_scene` packages that are
 [__TURTLEBOT3__]: https://github.com/ROBOTIS-GIT/turtlebot3
 [__HUSKY__]: https://github.com/husky/
 [__TURTLEBOT__]: https://github.com/turtlebot/turtlebot
-[__GIT_UNITYSIM__]: https://github.com/ironWolf1990/unity-ros-sharp
+[__GIT_UNITYSIM__]: https://github.com/ironWolf1990/unity-ros-simulation
 [__DOC_LXD__]: ./docs/lxd.md
 [__DOC_DOCKER__]: ./docs/docker.md
