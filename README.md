@@ -10,6 +10,7 @@ Repository contains ubuntu ros packages to work with :
 1. [Jackal][__JACKAL__]
 2. [Spot][__SPOT__]
 3. [Turtlebot3][__TURTLEBOT3__]
+4. [Shadowhand][__SHADOWHAND__]
 
 Addition packages and dependencies are required to work with
 
@@ -28,6 +29,11 @@ Repository contains `file_server` and `unity_simulation_scene` packages that are
 ## Turtlebot3 communiation launch
 
 `roslaunch unity_simulation_scene unity_turtlebot3_scene.launch`
+
+
+## XACRO to URDF
+
+`rosrun xacro xacro --inorder -o <OUTPUT_NAME>.urdf <XACRO_FILE>`
 
 # Development Setup
 
@@ -69,6 +75,8 @@ Repository contains `file_server` and `unity_simulation_scene` packages that are
             │   │   ├── spot_driver
             │   │   ├── spot_msgs
             │   │   └── spot_viz
+            │   ├── shadow_hand
+            │   │   │   └── sr_grasp_mesh_planner
             │   ├── turtlebot
             │   │   ├── create_description
             │   │   ├── kobuki_description
@@ -106,3 +114,4 @@ Repository contains `file_server` and `unity_simulation_scene` packages that are
 [__GIT_UNITYSIM__]: https://github.com/ironWolf1990/unity-ros-sharp
 [__DOC_LXD__]: ./docs/lxd.md
 [__DOC_DOCKER__]: ./docs/docker.md
+[__SHADOWHAND__]: https://wiki.ros.org/Robots/Shadow_Hand
